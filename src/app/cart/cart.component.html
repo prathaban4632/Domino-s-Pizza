@@ -1,0 +1,84 @@
+
+<div class="navigation-container">
+  <div class="navigation-content">
+  <div class="logo"><img height="40px" src="https://wallpapers.com/images/high/black-dominos-pizza-logo-92oyw0g8ewm7ydi5.jpg"/></div>
+  <div class="menu">
+  <ul>
+    <li><a routerLink="/menu">MENU</a></li>
+  <li><a routerLink="/dashboard">BEST DEALS</a></li>
+
+  </ul>
+  </div>
+  <div class="cart">
+  <img height="30px" src="https://www.excelrestro.com/images/cart.png">
+  <a  routerLink="/cart">Cart</a>
+  </div>
+  </div>
+  </div>
+
+<div class="position">
+
+  <div class="card">
+
+    <div class="image">
+       <img src="https://img2.exportersindia.com/product_images/bc-full/2018/10/2044906/veg-loaded-pizza-1540892242-4420413.jpeg">
+    </div>
+    <div class="title">
+     <h1>
+      Chicken Keema Paratha Pizza</h1>
+    </div>
+    <div class="des">
+     <p>A pizza loaded with a spicy combination of Harissa sauce, Peri Peri chicken chunks and delicious pasta.</p>
+     <button type="button">Remove</button>
+    </div>
+    </div>
+<!--cards -->
+
+<div class="card">
+
+<div class="image">
+ <img src="http://feenix.co.in/wp-content/uploads/2018/02/LoadedL.jpg">
+</div>
+<div class="title">
+<h1>
+Moroccan Spice Pasta Pizza </h1>
+</div>
+<div class="des">
+<p>Flavourful & meaty chicken keema paratha and goodness of cheesy pizza coming together in an epic</p>
+<button type="button">Remove</button>
+</div>
+</div>
+
+<!--cards -->
+
+<div class="card">
+
+<div class="image">
+ <img src="https://chefchoice.com.np/wp-content/uploads/2020/07/Non-Veg_Supreme.jpg">
+</div>
+<div class="title">
+<h1>
+Spiced Double Chicken </h1>
+</div>
+<div class="des">
+<p>Delightful combination of our spicy duo- Pepper Barbecue Chicken and Peri Peri Chicken for Chicken Lovers.</p>
+<button type="button">Remove</button>
+</div>
+</div>
+
+</div>
+<tbody>
+
+  <tr *ngFor="let Cart of cart">
+    <td>{{Cart?._id}}</td>
+    <td>{{Cart?.pizza_name}}</td>
+    <td>{{Cart?.price}}</td>
+    <td>{{Cart?.quantity}}</td>
+
+    <td> <button class="btn btn-danger">Delete</button>
+    <button class="btn btn-primary">Edit</button></td>
+
+
+
+  </tr>
+</tbody>
